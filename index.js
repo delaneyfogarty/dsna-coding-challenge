@@ -38,3 +38,15 @@ function addPunctuation(punctuation) {
 
 const exclamation = addPunctuation("!!!")("hi");
 console.log(exclamation);
+
+
+function addFirst(element){
+  return (arr) => {
+    return [element, ...arr ];
+  }
+}
+
+const addStart = addFirst('purple')(['red', 'orange', 'blue']);
+console.log('addStart', addStart);
+const addNumber = addFirst(1)([2, 3, 4, 5]);
+console.log('addNumber', addNumber);

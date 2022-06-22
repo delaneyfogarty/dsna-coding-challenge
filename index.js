@@ -103,5 +103,4 @@ function fib(n) {
   return total;
 }
 
-fib(8);
 console.log(fib(8));

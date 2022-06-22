@@ -14,20 +14,27 @@ function map(arr, callback) {
 map(myArray, (x) => x * 2);
 map(myArray, (x) => x ** 2);
 
-
-function filter(arr, callback){
+function filter(arr, callback) {
   const newArr = [];
-  for(let i=0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     const number = arr[i];
     const newItem = callback(number);
-    if (newItem){
+    if (newItem) {
       newArr.push(number);
     }
-    
   }
   console.log(newArr);
-    return newArr
+  return newArr;
 }
 
-filter([2, 6, 5], x => x % 2 === 0);
-filter([6, 17, 34], x => x % 17 === 0);
+filter([2, 6, 5], (x) => x % 2 === 0);
+filter([6, 17, 34], (x) => x % 17 === 0);
+
+function addPunctuation(punctuation) {
+  return (string) => {
+    return string + punctuation;
+  };
+}
+
+const exclamation = addPunctuation("!!!")("hi");
+console.log(exclamation);

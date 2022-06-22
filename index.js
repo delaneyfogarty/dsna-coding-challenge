@@ -94,7 +94,7 @@ console.log("addStart", addStart);
 const addNumber = addFirst(1)([2, 3, 4, 5]);
 console.log("addNumber", addNumber);
 
-//
+//fibonacci function 
 
 function fib(n) {
   if (n === 0) return 0;
@@ -104,3 +104,5 @@ function fib(n) {
 }
 
 console.log(fib(8));
+console.log(fib(9));
+console.log(fib(0));
